@@ -28,22 +28,33 @@ import { Options, Vue } from 'vue-class-component';
 
 @Options({
   props: {
-    msg: String
   }
 })
-export default class HelloWorld extends Vue {
-  msg!: string
+export default class NavBar extends Vue {
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.bar {
+  display: inline-block;
+  margin: 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.menu {
+  margin: 40px 0 0 0;
+  background-image: url(../ressources/Menu.png);
+}
+.trier {
+  display: inline-block;
+  margin: 0;
+}
+.recherche {
+  margin: 40px 0 0 0;
+  background-image: url(../ressources/Menu.png);
+}
+.user {
+  margin: 40px 0 0 0;
+  background-image: url(../ressources/Menu.png);
 }
 li {
   display: inline-block;
