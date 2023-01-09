@@ -4,8 +4,8 @@
     <LogMe></LogMe>
   </div>
   <div class="SignIn">
-    <h3>Vous n'avez pas de compte ?</h3>
-    <router-link to="/signin"> ====> Inscrivez-vous !!!</router-link>
+    <h3>Bienvenue sur l'écran de connexion de test</h3>
+    <LogMe></LogMe>
   </div>
 </template>
 
