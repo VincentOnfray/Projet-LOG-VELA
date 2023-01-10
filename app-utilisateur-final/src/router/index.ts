@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AuthentificationView from '../views/AuthentificationView.vue'
-import SignView from '../views/AuthentificationView.vue'
+import SignView from '../views/SignView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
