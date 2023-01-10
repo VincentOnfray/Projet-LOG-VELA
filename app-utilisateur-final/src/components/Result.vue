@@ -7,7 +7,10 @@
   import { RouterLink, Router, loadRouteLocation, useRoute, useLink } from 'vue-router';
 
   export default class Result extends Vue {
-
+    Nom!: string;
+    Illustration!: string;
+    Prix!: string;
+    Disponibilite!: boolean;
   }
   
 

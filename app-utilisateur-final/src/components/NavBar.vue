@@ -68,9 +68,6 @@ export default class NavBar extends Vue {
 .loupe{
   height:2em;
 }
-img{
-  
-}
 .bar ol {
   list-style-type: none;
   padding-left: 0;
