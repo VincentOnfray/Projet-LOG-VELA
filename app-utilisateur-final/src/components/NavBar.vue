@@ -1,7 +1,8 @@
 <template>
-  <img class="logo" src="../ressources/CESIEATS.png"/>
   
   <nav class="bar">
+    <img class="logo" src="../ressources/CESIEATS.png"/>
+
     <ol>
       <li class="menu">
         <input class="bouton" type="button" value=" " />
@@ -49,15 +50,26 @@ export default class NavBar extends Vue {
   overflow: hidden;
   border: 2px solid black;
   color:white;
+  width:70em;
   
+}
+.champ{
+  height:2em;
+  font-size: 1em;
+}
+.formulaire{
+  display:inline-block;
 }
 .logo{
   width:14em;
   float:left;
   margin-top: 0;
 }
+.loupe{
+  height:2em;
+}
 img{
-  width:1em;
+  
 }
 .bar ol {
   list-style-type: none;
@@ -87,9 +99,11 @@ img{
 }
 .recherche {
   margin: 40px 0 0 0;
+  height:20px;
 }
-.recherche .bouton {
-  background-image: url(../ressources/Loupe.png);
+.recherche .loupe {
+  float:center;
+  height:30px;
 }
 .user {
   margin: 40px 0 0 0;
