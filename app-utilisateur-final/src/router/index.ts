@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AuthentificationView from '../views/AuthentificationView.vue'
 import SignView from '../views/SignView.vue'
+import RechercheView from '../views/RechercheView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,6 +27,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/signin',
     name: 'signin',
     component: SignView
+  },
+  {
+    path: '/search',
+    name: 'sigsearchnin',
+    component: RechercheView
   }
 ]
 

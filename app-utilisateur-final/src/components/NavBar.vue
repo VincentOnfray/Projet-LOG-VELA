@@ -17,13 +17,10 @@
         <!--<a href="#">(les plus avantageux)</a>-->
       </li>
       <li class="recherche">
-        <form action="" class="formulaire">
-          <input class="champ" type="text" placeholder="Chercher..."/>
-          <!--
+        <input class="champ" type="text" placeholder="Chercher..."/>
+        <!--
 <input class="bouton" type="image" value=" " src="../ressources/Loupe.png">-->
-          <button><img src="../ressources/Loupe.png"></button>
-
-        </form>
+        <button><img src="../ressources/Loupe.png"></button>
       </li>
       <li class="user">
         <input class="bouton" type="button" value=" " />
