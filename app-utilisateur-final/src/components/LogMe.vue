@@ -14,12 +14,13 @@
     <button type="submit">Connexion</button>
   </div>
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn"><a href="#">Retour à l'accueil</a></button>
+    <button type="button" class="cancelbtn"><a href="#">> 
+Retour à l'accueil</a></button>
     <span class="psw">Mot de passe <a href="#">oublié?</a></span>
   </div>
 </form>
-  </template>
 
+  </template>
   <script lang="ts">
   import { Options, Vue } from 'vue-class-component';
 

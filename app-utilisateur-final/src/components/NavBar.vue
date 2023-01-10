@@ -1,4 +1,6 @@
 <template>
+  <img class="logo" src="../ressources/CESIEATS.png"/>
+  
   <nav class="bar">
     <ol>
       <li class="menu">
@@ -7,17 +9,20 @@
         <router-link to="/about">About</router-link>-->
       </li>
       <li class="pop">
-        <router-link to="/">Les plus populaires</router-link>
+        <router-link to="/" style="color:white">Les plus populaires</router-link>
         <!--<a href="#">(les plus populaires)</a>-->
       </li>
       <li class="av">
-        <router-link to="/">Les plus avantageux</router-link>
+        <router-link to="/" style="color:white">Les plus avantageux</router-link>
         <!--<a href="#">(les plus avantageux)</a>-->
       </li>
       <li class="recherche">
         <form action="" class="formulaire">
           <input class="champ" type="text" placeholder="Chercher..."/>
-          <input class="bouton" type="button" value=" " />
+          <!--
+<input class="bouton" type="image" value=" " src="../ressources/Loupe.png">-->
+          <button><img src="../ressources/Loupe.png"></button>
+
         </form>
       </li>
       <li class="user">
@@ -43,9 +48,19 @@ export default class NavBar extends Vue {
 .bar {
   display: inline-block;
   margin: 0;
-  background-color: brown;
+  background-color: #04AA6D;
   overflow: hidden;
   border: 2px solid black;
+  color:white;
+  
+}
+.logo{
+  width:14em;
+  float:left;
+  margin-top: 0;
+}
+img{
+  width:1em;
 }
 .bar ol {
   list-style-type: none;
@@ -56,6 +71,7 @@ export default class NavBar extends Vue {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  color:white;
 }
 .menu {
   margin: 0 0 0 0;
@@ -66,9 +82,11 @@ export default class NavBar extends Vue {
 }
 .pop {
   margin: 0;
+  color:white;
 }
 .av {
   margin: 0;
+  color:white;
 }
 .recherche {
   margin: 40px 0 0 0;
