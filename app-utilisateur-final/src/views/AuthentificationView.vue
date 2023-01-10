@@ -1,6 +1,5 @@
 <template>
   <div class="LogIn">
-    <h3>Bienvenue sur l'écran de connexion de test</h3>
     <LogMe></LogMe>
   </div>
   <div class="SignIn">
