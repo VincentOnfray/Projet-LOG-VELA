@@ -2,7 +2,7 @@
   <nav>
     <NavBar></NavBar>
   </nav>
-  <router-view/>
+  <router-view></router-view>
 </template>
 
 <script lang="ts">

@@ -5,7 +5,7 @@
 
     <ol>
       <li class="menu">
-        <input class="bouton" type="button" value=" " />
+        <button><img src="../ressources/Menu.png"></button>
         <!--<router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link>-->
       </li>
@@ -24,7 +24,7 @@
         <button><img src="../ressources/Loupe.png"></button>
       </li>
       <li class="user">
-        <input class="bouton" type="button" value=" " />
+        <button><img src="../ressources/Utilisateur.jpg"></button>
       </li>
     </ol>
   </nav>
