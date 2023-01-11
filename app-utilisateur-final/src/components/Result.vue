@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <h1>Résultat</h1>
+    <h1>{{Nom}}</h1>
     <img src="{{Illustration}}">
   </div>
   <div >
-    {{}}
+    {{Prix}}
   </div>
-  
+  <div >
+    {{Disponibilite}}
+  </div>  
 </template>
 
 <script lang="ts">
