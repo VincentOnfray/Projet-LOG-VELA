@@ -2,6 +2,7 @@
   
   <nav class="bar">
     <img class="logo" src="../ressources/CESIEATS.png"/>
+    <router-link to="/login" style="color:green">Me connecter</router-link>
 
     <ol>
       <li class="menu">
@@ -21,7 +22,7 @@
         <input class="champ" type="text" placeholder="Chercher..."/>
         <!--
 <input class="bouton" type="image" value=" " src="../ressources/Loupe.png">-->
-        <button><img src="../ressources/Loupe.png"></button>
+        <button><img class="loupe" src="../ressources/Loupe.png"></button>
       </li>
       <li class="user" v-if="props.connect === true">
         <button><img src="../ressources/Utilisateur.jpg"></button>

@@ -9,8 +9,13 @@
 import { Options, Vue } from 'vue-class-component';
 import NavBar from '@/components/NavBar.vue'; // @ is an alias to /src
 
+<<<<<<< HEAD
+
+Options({
+=======
 @Options({
   name: 'App',
+>>>>>>> abb52a6f94f5de2dbadf72391fbe1071c1ad3f8d
   components: {
     NavBar,
   },
