@@ -1,1 +1,0 @@
-wsl –-shutdown

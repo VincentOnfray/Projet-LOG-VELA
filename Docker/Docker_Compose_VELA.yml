@@ -1,0 +1,28 @@
+version: latest
+services:
+  mongo_db:
+    image: vela_mongo
+    user: mongodb
+    volumes:
+     - ./mongodata:/data/db
+    restart: always
+    ports: 
+      - 5000:5000
+  mysql_db:
+    image: vela_mysql
+    user: root
+    volumes:
+     - /mysql_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: vela
+      MYSQL_USER: vela
+      MYSQL_PASSWORD: vela
+      MYSQL_DATABASE: vela_sqlbd
+    ports: 
+      - 3306:3306
+    #protocol: tcp
+    #command: sh -c "mysql -P 3306 -u root -pvela"
+      
+volumes:   # add this section
+  step:  
