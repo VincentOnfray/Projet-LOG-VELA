@@ -6,7 +6,7 @@
 
     <ol>
       <li class="menu">
-        <input class="bouton" type="button" value=" " />
+        <button><img src="../ressources/Menu.png"></button>
         <!--<router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link>-->
       </li>
@@ -24,8 +24,11 @@
 <input class="bouton" type="image" value=" " src="../ressources/Loupe.png">-->
         <button><img class="loupe" src="../ressources/Loupe.png"></button>
       </li>
-      <li class="user">
-        <input class="bouton" type="button" value=" " />
+      <li class="user" v-if="connect === true">
+        <button><img src="../ressources/Utilisateur.jpg"></button>
+      </li>
+      <li class="con" v-else>
+        <button>Connexion</button>
       </li>
     </ol>
   </nav>
@@ -36,9 +39,11 @@ import { Options, Vue } from 'vue-class-component';
 
 @Options({
   props: {
+    connect: false
   }
 })
 export default class NavBar extends Vue {
+  connect!: boolean;
 }
 </script>
 
@@ -68,9 +73,6 @@ export default class NavBar extends Vue {
 }
 .loupe{
   height:2em;
-}
-img{
-  
 }
 .bar ol {
   list-style-type: none;
