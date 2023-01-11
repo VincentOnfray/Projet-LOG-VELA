@@ -9,13 +9,21 @@
 import { Options, Vue } from 'vue-class-component';
 import NavBar from '@/components/NavBar.vue'; // @ is an alias to /src
 
-Options({
+@Options({
+  name: 'App',
   components: {
     NavBar,
   },
 })
 
-export default class App extends Vue {}
+export default class App extends Vue {
+  props!:{
+    msg: ''
+  }
+  methods!:{
+    
+  }
+}
 </script>
 
 <style>
