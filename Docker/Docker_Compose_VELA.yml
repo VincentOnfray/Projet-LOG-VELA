@@ -5,7 +5,7 @@ services:
     user: mongodb
     volumes:
      - ./mongodata:/data/db
-    restart: always
+    #restart: always
     ports: 
       - 5000:5000
   mysql_db:
