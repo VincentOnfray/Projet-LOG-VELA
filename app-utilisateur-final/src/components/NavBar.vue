@@ -23,8 +23,11 @@
 <input class="bouton" type="image" value=" " src="../ressources/Loupe.png">-->
         <button><img src="../ressources/Loupe.png"></button>
       </li>
-      <li class="user">
+      <li class="user" v-if="connect === true">
         <button><img src="../ressources/Utilisateur.jpg"></button>
+      </li>
+      <li class="con" v-else>
+        <button>Connexion</button>
       </li>
     </ol>
   </nav>
@@ -35,9 +38,11 @@ import { Options, Vue } from 'vue-class-component';
 
 @Options({
   props: {
+    connect: false
   }
 })
 export default class NavBar extends Vue {
+  connect!: boolean;
 }
 </script>
 
