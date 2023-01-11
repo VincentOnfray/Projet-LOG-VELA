@@ -12,21 +12,27 @@
   <br>
   <div class="recherche">
     <input class="champ" type="text" placeholder="Chercher..."/>
-    <button><img src="../ressources/Loupe.png"></button>
+    <button><img src="../../ressources/Loupe.png"></button>
   </div>
   <br>
   <br>
-  <ul id="example-1">
-  <!--<li v-for="item in items" :key="item.message">
-    {{ item.message }}
-  </li>-->
-</ul>
-  <Result></Result>
+  <ul id="result">
+    <li v-show="Restaurateur" v-for="item in restaurants">
+      <Result></Result>
+    </li>
+    <li v-show="Menu" v-for="item in menus">
+      <Result></Result>
+    </li>
+    <li v-show="Plat" v-for="item in plats">
+      <Result></Result>
+    </li>
+  </ul>
+  
 </template>
 
 <script lang="ts">
   import { Options, Vue } from 'vue-class-component'; // @ is an alias to /src
-  import Result from '@/components/Result.vue'; // @ is an alias to /src
+  import Result from '@/components/recherche/Result.vue'; // @ is an alias to /src
 
   @Options({
   components: {
@@ -35,6 +41,16 @@
 })
 
   export default class Search extends Vue {
+    restaurants!: {
+      
+    };
+    menus!: {
+      
+    };
+    plats!: {
+      
+    };
+
     Restaurateur!: boolean;
     Menu!: boolean;
     Plat!: boolean; 

@@ -42,22 +42,6 @@ Retour à l'accueil</a></button>
     display: inline-block;
     margin: 0;
   }
-  .menu {
-    margin: 40px 0 0 0;
-    background-image: url(../ressources/Menu.png);
-  }
-  .trier {
-    display: inline-block;
-    margin: 0;
-  }
-  .recherche {
-    margin: 40px 0 0 0;
-    background-image: url(../ressources/Menu.png);
-  }
-  .user {
-    margin: 40px 0 0 0;
-    background-image: url(../ressources/Menu.png);
-  }
   li {
     display: inline-block;
     margin: 0 10px;

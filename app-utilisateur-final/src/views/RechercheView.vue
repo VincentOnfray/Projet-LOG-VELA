@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import Search from '@/components/Search.vue'; // @ is an alias to /src
+import Search from '@/components/recherche/Search.vue'; // @ is an alias to /src
 
 @Options({
   components: {

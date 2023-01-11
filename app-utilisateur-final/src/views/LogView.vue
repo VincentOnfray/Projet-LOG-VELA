@@ -10,12 +10,12 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import LogMe from '@/components/LogMe.vue'; // @ is an alias to /src
+import LogMe from '@/components/auth/LogMe.vue'; // @ is an alias to /src
 
 @Options({
   components: {
     LogMe,
   },
 })
-export default class AuthentificationView extends Vue {}
+export default class LogView extends Vue {}
 </script>

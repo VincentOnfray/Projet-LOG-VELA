@@ -1,12 +1,12 @@
 <template>
   
   <nav class="bar">
-    <img class="logo" src="../ressources/CESIEATS.png"/>
+    <img class="logo" src="../../ressources/CESIEATS.png"/>
     <router-link to="/login" style="color:green">Me connecter</router-link>
 
     <ol>
       <li class="menu">
-        <button><img src="../ressources/Menu.png"></button>
+        <button><img src="../../ressources/Menu.png"></button>
         <!--<router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link>-->
       </li>
@@ -22,10 +22,10 @@
         <input class="champ" type="text" placeholder="Chercher..."/>
         <!--
 <input class="bouton" type="image" value=" " src="../ressources/Loupe.png">-->
-        <button><img class="loupe" src="../ressources/Loupe.png"></button>
+        <button><img class="loupe" src="../../ressources/Loupe.png"></button>
       </li>
       <li class="user" v-if="props.connect === true">
-        <button><img src="../ressources/Utilisateur.jpg"></button>
+        <button><img src="../../ressources/Utilisateur.jpg"></button>
       </li>
       <li class="con" v-else>
         <button>Connexion</button>
@@ -65,9 +65,6 @@ export default class NavBar extends Vue {
   height:2em;
   font-size: 1em;
 }
-.formulaire{
-  display:inline-block;
-}
 .logo{
   width:14em;
   float:left;
@@ -92,7 +89,6 @@ export default class NavBar extends Vue {
 }
 .menu input {
   padding: 20 20 20 20;
-  background-image: url(../ressources/Menu.png);
 }
 .pop {
   margin: 0;
@@ -115,7 +111,6 @@ export default class NavBar extends Vue {
 }
 .user input {
   border-radius:  100% 100%;
-  background-image: url(../ressources/Utilisateur.jpg);
 }
 li {
   display: inline-block;

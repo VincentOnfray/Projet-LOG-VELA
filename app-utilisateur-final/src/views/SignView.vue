@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import SignIn from '@/components/SignIn.vue'; // @ is an alias to /src
+import SignIn from '@/components/auth/SignIn.vue'; // @ is an alias to /src
 
 @Options({
   components: {

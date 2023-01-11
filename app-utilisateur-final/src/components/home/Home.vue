@@ -1,17 +1,18 @@
 <template>
   <NavBar></NavBar>
+  <h>HOME</h>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import NavBar from '@/components/NavBar.vue'; // @ is an alias to /src
+import NavBar from '../tools/NavBar.vue'; 
 
 @Options({
   components: {
     NavBar,
   },
 })
-export default class HelloWorld extends Vue {
+export default class Home extends Vue {
   msg!: string
 }
 </script>
