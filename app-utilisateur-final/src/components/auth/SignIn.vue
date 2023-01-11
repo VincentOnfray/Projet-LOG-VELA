@@ -1,22 +1,20 @@
 <template>
-  <form>
-    <div class="container">
-      <label for="uname"><b>Nom </b></label>
-      <input type="text" placeholder="Entrer votre nom" name="uname" v-model="Name" required>
+  <div class="container">
+    <label for="uname"><b>Nom </b></label>
+    <input type="text" placeholder="Entrer votre nom" name="uname" v-model="Name" required>
 
-      <label for="mail"><b>Mail </b></label>
-      <input type="text" placeholder="Entrer votre adresse mail" name="mail" v-model="Mail" required>
+    <label for="mail"><b>Mail </b></label>
+    <input type="text" placeholder="Entrer votre adresse mail" name="mail" v-model="Mail" required>
 
-      <label for="psw"><b>Mot de passe</b></label>
-      <input type="password" placeholder="Entrer votre mot de passe" name="psw" v-model="Password" required>
+    <label for="psw"><b>Mot de passe</b></label>
+    <input type="password" placeholder="Entrer votre mot de passe" name="psw" v-model="Password" required>
 
-      <button v-on:click="valider">Valider</button>
-    </div>
+    <button v-on:click="valider">Valider</button>
+  </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-    </div>
-  </form> 
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
 </template>
 
 <script lang="ts">

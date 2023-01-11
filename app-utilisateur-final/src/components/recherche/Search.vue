@@ -61,13 +61,13 @@
 <style scoped>
    /* Bordered form */
    .Entreprise {
-    margin: 0 50px 0 0;
+    margin: 0 50px 0 5px;
    }
    .Menu {
-    margin: 0 50px 0 0;
+    margin: 0 50px 0 5px;
    }
    .Plat {
-    margin: 0 50px 0 0;
+    margin: 0 50px 0 5px;
    }
    .recherche {
     Height: 40px;
