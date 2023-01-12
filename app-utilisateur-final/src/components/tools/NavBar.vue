@@ -1,9 +1,6 @@
-<template>
-  
+<template>  
   <nav class="bar">
     <img class="logo" src="../../ressources/CESIEATS.png"/>
-    <router-link to="/login" style="color:green">Me connecter</router-link>
-
     <ol>
       <li class="menu">
         <button><img src="../../ressources/Menu.png"></button>
@@ -24,7 +21,7 @@
 <input class="bouton" type="image" value=" " src="../ressources/Loupe.png">-->
         <button><img class="loupe" src="../../ressources/Loupe.png"></button>
       </li>
-      <li class="user" v-if="props.connect === true">
+      <li class="user" v-if="connect === true">
         <button><img src="../../ressources/Utilisateur.jpg"></button>
       </li>
       <li class="con" v-else>
@@ -38,14 +35,10 @@
 import { Options, Vue } from 'vue-class-component';
 
 @Options({
-  props: {
-    connect: false
-  }
+  
 })
 export default class NavBar extends Vue {
-  props!: {
-    connect: boolean
-  }
+  connect!: boolean
 }
 </script>
 

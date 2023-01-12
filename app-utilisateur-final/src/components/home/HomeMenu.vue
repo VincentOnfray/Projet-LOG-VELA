@@ -1,17 +1,17 @@
 <template>
-  <NavBar></NavBar>
-  <h>HOME</h>
+  <div class="menu">
+
+  </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import NavBar from '../tools/NavBar.vue'; 
 
 @Options({
   components: {
-    NavBar,
   },
 })
+
 export default class Home extends Vue {
   msg!: string
 }

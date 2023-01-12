@@ -1,6 +1,6 @@
 <template>
   <div class="LogIn">
-    <LogMe></LogMe>
+    <log-me></log-me>
   </div>
   <div class="SignIn">
     <h3>Vous n'avez pas de compte ?</h3>

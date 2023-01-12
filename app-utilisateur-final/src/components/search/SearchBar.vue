@@ -18,13 +18,13 @@
   <br>
   <ul id="result">
     <li v-show="Restaurateur" v-for="item in restaurants">
-      <Result></Result>
+      <result-menu></result-menu>
     </li>
     <li v-show="Menu" v-for="item in menus">
-      <Result></Result>
+      <result-menu></result-menu>
     </li>
     <li v-show="Plat" v-for="item in plats">
-      <Result></Result>
+      <result-menu></result-menu>
     </li>
   </ul>
   
@@ -32,11 +32,11 @@
 
 <script lang="ts">
   import { Options, Vue } from 'vue-class-component'; // @ is an alias to /src
-  import Result from '@/components/recherche/Result.vue'; // @ is an alias to /src
+  import ResultMenu from '@/components/search/ResultMenu.vue'; // @ is an alias to /src
 
   @Options({
   components: {
-    Result
+    ResultMenu
   },
 })
 

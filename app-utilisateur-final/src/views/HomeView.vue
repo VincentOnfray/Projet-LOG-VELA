@@ -1,17 +1,19 @@
-<template>
+<template>  
+  <nav-bar></nav-bar>
   <body>
-    <h>DEBUT</h>
-    <Home></Home>
+    <home-menu></home-menu>
   </body>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import Home from '@/components/home/Home.vue'; // @ is an alias to /src
+import NavBar from '@/components//tools/NavBar.vue'; 
+import HomeMenu from '@/components/home/HomeMenu.vue'; // @ is an alias to /src
 
 @Options({
   components: {
-    Home
+    NavBar,
+    HomeMenu
   },
 })
 export default class HomeView extends Vue {}

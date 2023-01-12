@@ -1,7 +1,7 @@
 <template>
   <div class="SignIn">
     <h3>Veuillez remplir le formulaire</h3>
-    <SignIn></SignIn>
+    <sign-in></sign-in>
   </div>
 </template>
 
