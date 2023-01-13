@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LogView from '../views/LogView.vue'
 import SignView from '../views/SignView.vue'
 import RechercheView from '../views/RechercheView.vue'
+import UserView from '../views/UserView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -30,8 +31,14 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/search',
-    name: 'sigsearchnin',
+    name: 'search',
     component: RechercheView
+  }
+  ,
+  {
+    path: '/user',
+    name: 'user',
+    component: UserView
   }
 ]
 

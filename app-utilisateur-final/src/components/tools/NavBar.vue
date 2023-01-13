@@ -1,31 +1,17 @@
 <template>  
   <nav class="bar"> 
-    <ol>
-      <li class="home">
-        <router-link to="/">
-          <img class="logo" src="../../ressources/CESIEATS.png"/>
-        </router-link>    
-      </li>
-      <!--<div class="menu">
-        <button><img src="../../ressources/Menu.png"></button>
-      </div>-->
-      <li class="pop">
-        <router-link to="/" style="color:white">Les plus populaires</router-link>
-      </li>
-      <li class="av">
-        <router-link to="/" style="color:white">Les plus avantageux</router-link>
-      </li>
-      <li class="recherche">
-        <input class="champ" type="text" placeholder="Chercher..."/>
-        <button class="loupe"><img src="../../ressources/Loupe.png"></button>
-      </li>
-      <li class="user" v-if="connect === true">
-        <button><img src="../../ressources/Utilisateur.jpg"></button>
-      </li>
-      <li class="con" v-else>
-        <button @click="routeConnect">Connexion</button>
-      </li>
-    </ol>    
+    <router-link to="/" class="home">
+      <img class="logo" src="../../ressources/CESIEATS.png"/>
+    </router-link>    
+    <!--
+    <button class="menu"><img src="../../ressources/Menu.png"></button>
+    -->
+    <router-link to="/" style="color:white" class="pop">Les plus populaires</router-link>
+    <router-link to="/" style="color:white" class="av">Les plus avantageux</router-link>
+    <input class="recherche" id="champ" type="text" placeholder="Chercher..."/>
+    <button class="rechercheImage" id="loupe"><img src="../../ressources/Loupe.png"></button>
+    <router-link to="/user" class="user" v-if="connect === true"><img src="../../ressources/Utilisateur.jpg"></router-link>
+    <router-link to="/login" style="color:white" class="con" v-else>Connexion</router-link>
     
   </nav>
 </template>
@@ -39,54 +25,47 @@ import { RouterLink } from 'vue-router';
   
 })
 export default class NavBar extends Vue {
-  connect!: boolean;
-  routeConnect: ((payload: MouseEvent) => void) | undefined;
+  connect: boolean = true;
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .bar {
-  display: grid;
-  background-color: #04AA6D;  
-  grid-template-columns: repeat(5, 1fr);
-}
-li {
-  display: inline-block;
-  background-color: #04AA6D;  
-  margin: 0 50% 0 0;
-}
-.home {
-  grid-row: 1;
+  background-color: #04AA6D;
 }
 .logo{
-  width:10em;
-  float:left;
-  margin-top: 0;
+  width:5em;
+  float:inline-start;  
+  margin-left: -30px;
+  margin-top: -30px;
 }
-.pop {
-  grid-row: 2;
+.pop{
+  margin-right: 20px;
 }
 .av{
-  grid-row: 3;
+  margin-right: 20px;
 }
 .recherche {
-  /*margin: 0 40px 0 40px;*/
-  grid-row: 4;
-}
-.recherche .loupe img{
-  height: 1.4em;
-  width: 1.4em;
-}
-.champ{
+  margin: 0 0 0 20px;
   font-size: 1em;
 }
+.rechercheImage {
+  margin-right: 20px;
+}
+.rechercheImage img {
+  height: 1.3em;
+  width: 1.3em;
+}
 .user {
-  grid-row: 5;
-  margin: 0 40px 0 0;
+  float:inline-end;  
+  margin-inline-end: 0%;
+}
+.user img{
+  width: 2em;
 }
 .con {
-  grid-row: 5;
-  margin: 0 40px 0 0;
+  float:inline-end;  
+  margin-inline-end: 0%;
 }
 </style>
