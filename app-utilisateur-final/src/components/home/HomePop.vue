@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <p>Nouveautés :</p>
+    <p>Les plus populaires :</p>
     <div class="newOne">
       <home-prop></home-prop>
     </div>
@@ -15,15 +15,14 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HomeProp from '@/components/home/HomeProp.vue';
 
 @Options({
   components: {
-    HomeProp
   },
 })
 
-export default class HomeMenu extends Vue {
+export default class HomePop extends Vue {
+  msg!: string
 }
 </script>
 
