@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS EtatRestaurant (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-    CREATE TABLE IF NOT EXISTS Emploi (
+  CREATE TABLE IF NOT EXISTS Emploi (
   idRestaurant INT NULL,
   idUtilisateur INT NULL,
   idRoleEmploi INT NULL,
@@ -79,4 +79,7 @@ CREATE TABLE IF NOT EXISTS EtatRestaurant (
     REFERENCES RoleEmploi (idRoleEmploi)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+
+
+
 

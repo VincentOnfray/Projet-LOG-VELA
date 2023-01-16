@@ -21,7 +21,7 @@ services:
       MYSQL_DATABASE: vela_sqlbd
     
     ports: 
-      - 3305:3306
+      - 3306:3306
     #protocol: tcp
     #command: sh -c "mysql -P 3306 -u root -pvela"
       
