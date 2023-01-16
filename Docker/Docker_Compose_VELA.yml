@@ -1,13 +1,5 @@
 version: latest
 services:
-  mongo_db:
-    image: vela_mongo
-    user: mongodb
-    volumes:
-     - ./mongodata:/data/db
-    #restart: always
-    ports: 
-      - 5000:5000
   mysql_db:
     image: vela_mysql
     user: root
@@ -18,7 +10,7 @@ services:
       MYSQL_ROOT_PASSWORD: vela
       MYSQL_USER: vela
       MYSQL_PASSWORD: vela
-      MYSQL_DATABASE: vela_sqlbd
+      
     
     ports: 
       - 3305:3306
