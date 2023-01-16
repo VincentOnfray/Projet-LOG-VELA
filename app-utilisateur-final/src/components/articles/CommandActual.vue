@@ -1,9 +1,8 @@
 <template>
   <div class="profil">
     <img src="../../ressources/Utilisateur.jpg"/>
-    <div>Nom d'utilisateur : {{Name}}</div>
-    <div>Adresse email : {{Email}}</div>
-    <div>Lien de parrainage : {{Link}}</div>
+    <div>Date : {{Date}}</div>
+    <div>Articles commandés : {{Articles.Nom}}</div>
     <br>
   </div>
 
@@ -15,10 +14,12 @@
     props: {
     }
   })
-  export default class LogMe extends Vue {
-    Name: string = "TEST";
+  export default class CommandACtual extends Vue {
+    Date: string = "TEST";
     Email: string = "TEST";
-    Link: string = "http://www.test/cesi.fr";
+    Articles!:{
+      Nom: string;
+    };
   }
   </script>
 

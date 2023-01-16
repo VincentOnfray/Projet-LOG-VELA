@@ -6,10 +6,9 @@
     <!--
     <button class="menu"><img src="../../ressources/Menu.png"></button>
     -->
-    <router-link to="/1" style="color:white" class="pop">Les plus populaires</router-link>
     <router-link to="/2" style="color:white" class="av">Les plus avantageux</router-link>
-    <input class="recherche" id="champ" type="text" placeholder="Chercher..."/>
-    <router-link to="/search/{{inputSearch}}" class="rechercheImage" id="loupe"><img src="../../ressources/Loupe.png"></router-link>
+    <router-link to="/command" style="color:white" class="pop">Commandes</router-link>
+    <router-link to="/search" class="recherche" style="color:white" id="loupe">Recherche</router-link>
     <router-link to="/user" class="user" v-if="connect === true"><img src="../../ressources/Utilisateur.jpg"></router-link>
     <router-link to="/login" style="color:white" class="con" v-else>Connexion</router-link>
     
@@ -17,7 +16,6 @@
 </template>
 
 <script lang="ts">
-import router from '@/router';
 import { Options, Vue } from 'vue-class-component';
 import { RouterLink } from 'vue-router';
 
@@ -49,10 +47,6 @@ export default class NavBar extends Vue {
 }
 .recherche {
   margin: 0 0 0 20px;
-  font-size: 1em;
-}
-.rechercheImage {
-  margin-right: 20px;
 }
 .rechercheImage img {
   margin-left: 5px;

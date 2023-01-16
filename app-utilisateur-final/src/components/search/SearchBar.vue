@@ -16,17 +16,18 @@
   </div>
   <br>
   <br>
-  <ul id="result">
-    <li v-show="Restaurateur" v-for="item in restaurants">
-      <result-menu></result-menu>
-    </li>
-    <li v-show="Menu" v-for="item in menus">
-      <result-menu></result-menu>
-    </li>
-    <li v-show="Plat" v-for="item in plats">
-      <result-menu></result-menu>
-    </li>
-  </ul>
+  <div v-show="Restaurateur" v-for="item in restaurants">
+    <result-menu Nom="{{item.Nom}}" Illustration="{{Img}}" Prix="{{Prix}}" Disponibilite="{{Disponibilite}}"></result-menu>
+  </div>
+  <div v-show="Menu" v-for="item in menus">
+    <result-menu Nom="{{item.Nom}}" Illustration="{{Img}}" Prix="{{Prix}}" Disponibilite="{{Disponibilite}}"></result-menu>
+  </div>
+  <div v-show="Plat" v-for="item in plats">
+    <result-menu Nom="{{item.Nom}}" Illustration="{{Img}}" Prix="{{Prix}}" Disponibilite="{{Disponibilite}}"></result-menu>
+  </div>
+  <div v-show="!Restaurateur && !Menu && !Plat">
+    Aucune données dans lesquelles cherchés.
+  </div>
   
 </template>
 
@@ -42,13 +43,22 @@
 
   export default class Search extends Vue {
     restaurants!: {
-      
+      Nom: string;
+      Img: string;
+      Prix: string;
+      Disponibilite: boolean;
     };
     menus!: {
-      
+      Nom: string;
+      Img: string;
+      Prix: string;
+      Disponibilite: boolean;      
     };
     plats!: {
-      
+      Nom: string;
+      Img: string;
+      Prix: string;
+      Disponibilite: boolean;      
     };
 
     Restaurateur!: boolean;

@@ -4,6 +4,7 @@ import LogView from '../views/LogView.vue'
 import SignView from '../views/SignView.vue'
 import RechercheView from '../views/RechercheView.vue'
 import UserView from '../views/UserView.vue'
+import CommandView from '../views/CommandView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -35,15 +36,19 @@ const routes: Array<RouteRecordRaw> = [
     component: SignView
   },
   {
-    path: '/search/:bar',
+    path: '/search/',
     name: 'search',
     component: RechercheView
-  }
-  ,
+  },
   {
     path: '/user',
     name: 'user',
     component: UserView
+  },
+  {
+    path: '/command',
+    name: 'command',
+    component: CommandView
   }
 ]
 

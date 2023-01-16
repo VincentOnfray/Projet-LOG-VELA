@@ -2,13 +2,13 @@
   <div id="app">
     <h1>{{Nom}}</h1>
     <img src="{{Illustration}}">
+    <div >
+      {{Prix}}
+    </div>
+    <div >
+      {{Disponibilite}}
+    </div>  
   </div>
-  <div >
-    {{Prix}}
-  </div>
-  <div >
-    {{Disponibilite}}
-  </div>  
 </template>
 
 <script lang="ts">
@@ -29,5 +29,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
    /* Bordered form */
-
+   #app{
+    border: 2px solid black ;
+  }
 </style>
