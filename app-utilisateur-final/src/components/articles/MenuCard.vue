@@ -1,6 +1,16 @@
 <template>
   <div class="menu">
-
+    <div>Menu</div>
+    <br>
+    <div>Entrée</div>
+    <div>**</div>
+    <div>Plat</div>
+    <div>**</div>
+    <div>Dessert</div>
+    <br>
+    <div>{{Prix}}</div>
+    <br>
+    <button>Ajouter</button>
   </div>
 </template>
 
@@ -12,25 +22,17 @@ import { Options, Vue } from 'vue-class-component';
   },
 })
 
-export default class Home extends Vue {
-  msg!: string
+export default class MenuCard extends Vue {
+  Prix!: string;
+  art1!: string;
+  art2!: string;
+  art3!: string;
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+.menu{
+    border: 2px solid black ;
+  }
 </style>

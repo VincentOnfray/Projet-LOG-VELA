@@ -1,6 +1,11 @@
 <template>
-  <div class="menu">
-
+  <div class="plat">
+    <div>{{Name}}</div>
+    <img src="../../ressources/Utilisateur.jpg"/>
+    <div>{{Desc}}</div>
+    <div>{{Prix}}</div>
+    <br>
+    <button>Ajouter</button>
   </div>
 </template>
 
@@ -12,25 +17,19 @@ import { Options, Vue } from 'vue-class-component';
   },
 })
 
-export default class Home extends Vue {
-  msg!: string
+export default class DishCard extends Vue {
+  Name!: string;
+  Desc!: string;
+  Prix!: string;
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  .plat{
+    border: 2px solid black ;
+  }
+  img {
+    width: 10em;
+  }
 </style>
