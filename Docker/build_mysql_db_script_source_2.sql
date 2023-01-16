@@ -1,16 +1,22 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
 
-DROP DATABASE IF EXISTS vela_db;
-CREATE DATABASE IF NOT EXISTS vela_db;
-USE vela_db ;
 
+#------------------------------------------------------------
+# Table: role
+#------------------------------------------------------------
 
 CREATE TABLE role(
         idRole Int  Auto_increment  NOT NULL ,
         name   Varchar (50) NOT NULL
 	,CONSTRAINT role_PK PRIMARY KEY (idRole)
-);
+)ENGINE=InnoDB;
 
 
+#------------------------------------------------------------
+# Table: article
+#------------------------------------------------------------
 
 CREATE TABLE article(
         idArticle Int  Auto_increment  NOT NULL ,
@@ -18,8 +24,12 @@ CREATE TABLE article(
         prix      Float NOT NULL ,
         type      Bool NOT NULL
 	,CONSTRAINT article_PK PRIMARY KEY (idArticle)
-);
+)ENGINE=InnoDB;
 
+
+#------------------------------------------------------------
+# Table: user
+#------------------------------------------------------------
 
 CREATE TABLE user(
         idUser           Int  Auto_increment  NOT NULL ,
@@ -30,7 +40,12 @@ CREATE TABLE user(
         idRole           Int NOT NULL ,
         idUser_parrainer Int NOT NULL
 	,CONSTRAINT user_PK PRIMARY KEY (idUser)
-);
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: commande 
+#------------------------------------------------------------
 
 CREATE TABLE commande(
         idCommande   Int  Auto_increment  NOT NULL ,
@@ -39,8 +54,12 @@ CREATE TABLE commande(
         idUser       Int NOT NULL ,
         idRestaurant Int NOT NULL
 	,CONSTRAINT commande_PK PRIMARY KEY (idCommande)
-);
+)ENGINE=InnoDB;
 
+
+#------------------------------------------------------------
+# Table: restaurant
+#------------------------------------------------------------
 
 CREATE TABLE restaurant(
         idRestaurant Int  Auto_increment  NOT NULL ,
@@ -48,8 +67,12 @@ CREATE TABLE restaurant(
         etat         Varchar (50) NOT NULL ,
         idUser       Int NOT NULL
 	,CONSTRAINT restaurant_PK PRIMARY KEY (idRestaurant)
-);
+)ENGINE=InnoDB;
 
+
+#------------------------------------------------------------
+# Table: livraison
+#------------------------------------------------------------
 
 CREATE TABLE livraison(
         idLivraison Int  Auto_increment  NOT NULL ,
@@ -57,14 +80,18 @@ CREATE TABLE livraison(
         idCommande  Int NOT NULL ,
         idUser      Int NOT NULL
 	,CONSTRAINT livraison_PK PRIMARY KEY (idLivraison)
-);
+)ENGINE=InnoDB;
 
+
+#------------------------------------------------------------
+# Table: contient
+#------------------------------------------------------------
 
 CREATE TABLE contient(
         idCommande Int NOT NULL ,
         idArticle  Int NOT NULL
 	,CONSTRAINT contient_PK PRIMARY KEY (idCommande,idArticle)
-);
+)ENGINE=InnoDB;
 
 
 

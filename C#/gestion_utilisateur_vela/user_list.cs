@@ -21,7 +21,7 @@ namespace gestion_utilisateur_vela
 
         public user_list() {
             InitializeComponent();
-
+            Console.WriteLine("Hello");
             Db_Connect db = Db_Connect.getInstance();
             MySqlDataReader mdr = db.getUsers();
             mdr.Close();

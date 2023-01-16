@@ -9,8 +9,6 @@ EOF
 
 file="/etc/my.cnf"
 
-echo "[mysqld]
-default-authentication-plugin=mysql_native_password" >> $file
 
 
 
