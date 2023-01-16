@@ -24,7 +24,8 @@ export async function getAllUser(req: Request, res: Response) {
                 firstname: req.body.firstname,
                 email: req.body.email,
                 password: crypto.createHash('md5').update(req.body.password).digest('hex'),
-                idRole: req.body.idRole
+                idRole: req.body.idRole,
+                idUser_parrainer:req.body.idUser_parrainer
             })
 
             const results = await AppDataSource.getRepository(user).save(User)
