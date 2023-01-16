@@ -1,2 +1,2 @@
-mkdir D:/mongodb/database
+wsl --install
 Read-Host -Prompt "Press Enter to exit"
