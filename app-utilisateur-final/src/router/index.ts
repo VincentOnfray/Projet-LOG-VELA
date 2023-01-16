@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
+    path: '/:etat',
+    name: 'homeEtat',
+    component: HomeView
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting
@@ -30,7 +35,7 @@ const routes: Array<RouteRecordRaw> = [
     component: SignView
   },
   {
-    path: '/search',
+    path: '/search/:bar',
     name: 'search',
     component: RechercheView
   }

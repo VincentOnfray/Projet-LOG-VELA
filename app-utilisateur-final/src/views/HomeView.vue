@@ -1,9 +1,9 @@
 <template>  
   <nav-bar></nav-bar>
   <body>
-    <home-menu v-if="Home === 0"></home-menu>
-    <home-pop v-else-if="Home === 1"></home-pop>
-    <home-advantage v-else-if="Home === 2"></home-advantage>
+    <home-pop v-if="$route.params.etat === '1'"></home-pop>
+    <home-advantage v-else-if="$route.params.etat === '2'"></home-advantage>
+    <home-menu v-else></home-menu>
   </body>
 </template>
 
@@ -14,6 +14,7 @@ import HomeMenu from '@/components/home/HomeMenu.vue'; // @ is an alias to /src
 import HomePop from '@/components/home/HomePop.vue'; // @ is an alias to /src
 import HomeAdvantage from '@/components/home/HomeAdvantage.vue'; // @ is an alias to /src
 
+
 @Options({
   components: {
     NavBar,
@@ -22,7 +23,5 @@ import HomeAdvantage from '@/components/home/HomeAdvantage.vue'; // @ is an alia
     HomeAdvantage
   },
 })
-export default class HomeView extends Vue {
-  Home: number = 0;
-}
+export default class HomeView extends Vue {}
 </script>
