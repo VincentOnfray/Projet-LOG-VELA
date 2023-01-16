@@ -24,7 +24,10 @@ namespace gestion_utilisateur_vela
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
+               user_list f = new user_list(); // This is bad
+               f.Show();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
