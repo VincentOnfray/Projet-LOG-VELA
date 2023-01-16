@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,9 @@ namespace gestion_utilisateur_vela
         public user_list() {
             InitializeComponent();
 
+            Db_Connect db = Db_Connect.getInstance();
+            MySqlDataReader mdr = db.getUsers();
+            mdr.Close();
             //Get data
             List<User> itemlist = new List<User>();
             itemlist.Add(new User() { Name = "John Doe", Age = 3 });
