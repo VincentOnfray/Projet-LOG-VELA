@@ -23,7 +23,7 @@ namespace gestion_utilisateur_vela
         }
 
 
-        private string Connstring = @"server=localhost:3306;userid=vela;password=vela;database=vela_db";
+        private string Connstring = @"server=localhost:3305;userid=vela;password=vela;database=vela_db";
 
         
 
