@@ -3,6 +3,9 @@
     <img src="../../ressources/Utilisateur.jpg"/>
     <div>Nom d'utilisateur : {{Name}}</div>
     <div>Adresse email : {{Email}}</div>
+    <router-link to="/change" style="color:black" class="pop">Modifier</router-link>    
+    <br>
+    <br>
     <div>Lien de parrainage : {{Link}}</div>
     <br>
   </div>

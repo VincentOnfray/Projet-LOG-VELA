@@ -1,6 +1,8 @@
 <template>
   <div class="profil">
-    <div>Articles dans le panier : {{Articles.Nom}}</div>
+    <img src="../../ressources/Utilisateur.jpg"/>
+    <div>Date : {{Date}}</div>
+    <div>Articles commandés : {{Articles.Nom}}</div>
     <br>
   </div>
 
@@ -12,7 +14,8 @@
     props: {
     }
   })
-  export default class CommandActual extends Vue {
+  export default class CommandListe extends Vue {
+    Date: string = "TEST";
     Articles!:{
       Nom: string;
     };

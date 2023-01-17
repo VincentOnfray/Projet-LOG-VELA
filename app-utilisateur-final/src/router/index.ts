@@ -5,6 +5,7 @@ import SignView from '../views/SignView.vue'
 import RechercheView from '../views/RechercheView.vue'
 import UserView from '../views/UserView.vue'
 import CommandView from '../views/CommandView.vue'
+import ChangeView from '../views/ChangeView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -44,6 +45,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/user',
     name: 'user',
     component: UserView
+  },
+  {
+    path: '/change',
+    name: 'change',
+    component: ChangeView
   },
   {
     path: '/command',

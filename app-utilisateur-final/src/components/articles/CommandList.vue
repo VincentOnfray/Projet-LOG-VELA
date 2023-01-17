@@ -1,15 +1,15 @@
 <template>
   <div v-for="item in Commands">
-    <command-actual></command-actual>
+    <command-liste></command-liste>
   </div>
 
 </template>
 <script lang="ts">
   import { Options, Vue } from 'vue-class-component';
-  import CommandActual from './CommandActual.vue';
+  import CommandListe from './CommandListe.vue';
 
   @Options({
-    CommandActual
+    CommandListe
   })
   export default class CommandList extends Vue {
     Commands!: {

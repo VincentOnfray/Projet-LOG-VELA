@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import NavBar from '@/components//tools/NavBar.vue'; 
+import NavBar from '@/components/tools/NavBar.vue'; 
 import CommandList from '@/components/articles/CommandList.vue'; // @ is an alias to /src
 import CommandActual from '@/components/articles/CommandActual.vue'; // @ is an alias to /src
 

@@ -1,13 +1,8 @@
 <template>
   <div class="menu">
-    <div>Menu</div>
-    <br>
-    <div>Entrée</div>
-    <div>**</div>
-    <div>Plat</div>
-    <div>**</div>
-    <div>Dessert</div>
-    <br>
+    <div>{{Name}}</div>
+    <img src="../../ressources/Utilisateur.jpg"/>
+    <div>{{Desc}}</div>
     <div>{{Prix}}</div>
     <br>
     <button>Ajouter</button>
@@ -24,9 +19,8 @@ import { Options, Vue } from 'vue-class-component';
 
 export default class MenuCard extends Vue {
   Prix!: string;
-  art1!: string;
-  art2!: string;
-  art3!: string;
+  Name!: string;
+  Desc!: string;
 }
 </script>
 
