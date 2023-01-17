@@ -18,6 +18,7 @@
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
   </div>
+  <div><button type="button" class="suprbtn">Suppression du compte</button></div>
 </template>
 
 <script lang="ts">
@@ -75,6 +76,12 @@ button:hover {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
+}
+
+.suprbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: red;
 }
 
 /* Center the avatar image inside this container */
