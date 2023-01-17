@@ -85,6 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Db_Connect.cs" />
+    <Compile Include="Single_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Single_user.Designer.cs">
+      <DependentUpon>Single_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_list.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -23,18 +23,23 @@ namespace gestion_utilisateur_vela
         }
 
 
-        private string Connstring = @"server=localhost;userid=vela;password=vela;database=vela_db;port=3305";
+        private string Connstring = @"server=localhost;userid=root;password=vela;database=vela_db;port=3305";
 
         
 
         public MySqlDataReader getUsers() {
 
-            MySqlDataReader mdr = execSql("SELECT * FROM Utilisateur");
+            MySqlDataReader mdr = execSql("SELECT * FROM user");
             while (mdr.Read())
             {
                 Console.WriteLine(mdr.GetString(0));
             }
             return mdr;
+        }
+
+        public Boolean checkCredentials(string login, string pw)
+        {
+            return true;
         }
 
         private MySqlDataReader execSql(string sql)

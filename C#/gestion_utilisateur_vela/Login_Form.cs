@@ -22,20 +22,35 @@ namespace gestion_utilisateur_vela
 
         }
 
+
+        private Boolean isLoginValid(string login, string pw)
+        {
+            if (login == "root" && pw == "root") {
+                //TODO: check DB credentials
+                return true;
+            }
+            return false;    
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            
-               user_list f = new user_list(); // This is bad
-               f.Show();
-            
+            if(isLoginValid(txbx_username.Text, txbx_password.Text)){ 
+                //Load next form
+                user_list f = new user_list(); 
+                f.Show();
+            } else
+            {
+                Invalid_Label.Visible = true;
+
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txbx_username_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void txbx_password_TextChanged(object sender, EventArgs e)
         {
 
         }
