@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using MySql.Data.MySqlClient;
 
 
+
 namespace gestion_utilisateur_vela
 {
    
@@ -30,15 +31,17 @@ namespace gestion_utilisateur_vela
             var usrs = await client.GetAsync("http://localhost:8080/user/AllUsers");
             var usrsJson = await usrs.Content.ReadAsStringAsync();
             dynamic usrsJsonArray = JsonConvert.DeserializeObject(usrsJson);
-            user_list.getInstance().updateUsrList(usrsJsonArray);
-            
+            UsersListForm.getInstance().updateUsrList(usrsJsonArray);
+            MongoApiConnector.getInstance().Log("Fetched Users List");
+
         }
 
         public async void deleteUser(int id)
         {
-            var usrs = await client.DeleteAsync("http://localhost:8080/user/DeleteUser/"+id.ToString());
-            var usrsJson = await usrs.Content.ReadAsStringAsync();
+            var del = await client.DeleteAsync("http://localhost:8080/user/DeleteUser/"+id.ToString());
+            var usrsJson = await del.Content.ReadAsStringAsync();
             Console.WriteLine(usrsJson);
+            
         }
 
         public Boolean checkCredentials(string login, string pw)
@@ -46,10 +49,33 @@ namespace gestion_utilisateur_vela
             //TODO: an actual login check
             if(login.Length>5 && pw.Length > 5)return true;
             return false;
+            MongoApiConnector.getInstance().Log("Credentials Validated");
+
         }
+
+        public async void UpdateUser(string jsonUsr, string id)
+        {
+            var content = new StringContent(jsonUsr);
+            var usr = await client.PutAsync("http://localhost:8080/user/UpdateUser/" + id.ToString(),content);
+            var answer = await usr.Content.ReadAsStringAsync();
+            MongoApiConnector.getInstance().Log("Updated usr: "+jsonUsr);
+
+            Console.WriteLine("ANSWER: "+answer);
+        }
+
+        public async void CreateUser(string jsonUsr)
+        {
+            var content = new StringContent(jsonUsr);
+            var usr = await client.PostAsync("http://localhost:8080/user/AddUser",content);
+            var answer = await usr.Content.ReadAsStringAsync();
+
+            MongoApiConnector.getInstance().Log("CreatedUsr: " +jsonUsr);
+
+            Console.WriteLine("ANSWER: " + answer);
+        }
+    }
 
         
 
 
-    }
 }
