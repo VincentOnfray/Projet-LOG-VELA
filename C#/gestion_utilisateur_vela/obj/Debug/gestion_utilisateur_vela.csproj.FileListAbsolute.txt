@@ -32,3 +32,6 @@ C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\C#\Gestion_utilisateur_V
 C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\C#\Gestion_utilisateur_VELA\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\C#\Gestion_utilisateur_VELA\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\C#\Gestion_utilisateur_VELA\obj\Debug\gestion_utilisateur_vela.csproj.CopyComplete
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\C#\gestion_utilisateur_vela\obj\Debug\gestion_utilisateur_vela.Single_user.resources
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\C#\gestion_utilisateur_vela\bin\Debug\Newtonsoft.Json.dll
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\C#\gestion_utilisateur_vela\bin\Debug\Newtonsoft.Json.xml

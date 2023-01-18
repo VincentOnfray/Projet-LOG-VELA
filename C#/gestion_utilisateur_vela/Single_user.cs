@@ -16,5 +16,10 @@ namespace gestion_utilisateur_vela
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

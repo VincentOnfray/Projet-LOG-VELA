@@ -43,7 +43,7 @@ namespace gestion_utilisateur_vela
             this.btn_login.Location = new System.Drawing.Point(315, 259);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(111, 33);
-            this.btn_login.TabIndex = 0;
+            this.btn_login.TabIndex = 2;
             this.btn_login.Text = "confirm";
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.button1_Click);
@@ -65,7 +65,7 @@ namespace gestion_utilisateur_vela
             this.txbx_password.Name = "txbx_password";
             this.txbx_password.PasswordChar = '*';
             this.txbx_password.Size = new System.Drawing.Size(221, 20);
-            this.txbx_password.TabIndex = 2;
+            this.txbx_password.TabIndex = 1;
             this.txbx_password.TextChanged += new System.EventHandler(this.txbx_password_TextChanged);
             // 
             // txbx_username
@@ -73,7 +73,7 @@ namespace gestion_utilisateur_vela
             this.txbx_username.Location = new System.Drawing.Point(270, 138);
             this.txbx_username.Name = "txbx_username";
             this.txbx_username.Size = new System.Drawing.Size(221, 20);
-            this.txbx_username.TabIndex = 3;
+            this.txbx_username.TabIndex = 0;
             this.txbx_username.TextChanged += new System.EventHandler(this.txbx_username_TextChanged);
             // 
             // label2

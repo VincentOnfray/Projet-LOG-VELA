@@ -10,6 +10,16 @@ CREATE TABLE role(
 	,CONSTRAINT role_PK PRIMARY KEY (idRole)
 );
 
+INSERT INTO role (name)
+VALUES ('Admin'); 
+INSERT INTO role (name)
+VALUES ('Utilisateur_final');
+INSERT INTO role (name)
+VALUES ('Livreur');
+INSERT INTO role (name)
+VALUES ('Restaurateur');   
+
+
 
 
 CREATE TABLE article(
@@ -31,6 +41,8 @@ CREATE TABLE user(
         idUser_parrainer Int NOT NULL
 	,CONSTRAINT user_PK PRIMARY KEY (idUser)
 );
+
+
 
 CREATE TABLE commande(
         idCommande   Int  Auto_increment  NOT NULL ,
@@ -74,10 +86,7 @@ ALTER TABLE user
 	FOREIGN KEY (idRole)
 	REFERENCES role(idRole);
 
-ALTER TABLE user
-	ADD CONSTRAINT user_user1_FK
-	FOREIGN KEY (idUser_parrainer)
-	REFERENCES user(idUser);
+
 
 ALTER TABLE commande
 	ADD CONSTRAINT commande_user0_FK

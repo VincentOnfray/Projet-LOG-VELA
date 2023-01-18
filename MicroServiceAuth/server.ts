@@ -19,7 +19,7 @@ const port : number = 8080;
 
 
 app.use(express.json());
-app.use('/get', routes)  
+app.use('/user', routes)  
 
 app.listen(port, function(){
     console.log('app is listen on port ')

@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
+using System.Net.Http;
+using Newtonsoft.Json;
 using MySql.Data.MySqlClient;
+
 
 namespace gestion_utilisateur_vela
 {
@@ -13,7 +12,7 @@ namespace gestion_utilisateur_vela
     class Db_Connect
     {
         private static Db_Connect Instance;
-
+        static HttpClient client = new HttpClient();
         public static Db_Connect getInstance() {
             if (Instance == null) {
                 Instance = new Db_Connect(); 
@@ -23,18 +22,21 @@ namespace gestion_utilisateur_vela
         }
 
 
-        private string Connstring = @"server=localhost;userid=root;password=vela;database=vela_db;port=3305";
+        //private string Connstring = @"server=localhost;userid=root;password=vela;database=vela_db;port=3305";
 
         
 
-        public MySqlDataReader getUsers() {
+        public async void getUsers() {
+            var usrs = await client.GetAsync("http://localhost:8080/user/AllUsers");
+            var usrsJson = await usrs.Content.ReadAsStringAsync();
+            dynamic usrsJsonArray = JsonConvert.DeserializeObject(usrsJson);
+            user_list.getInstance().updateUsrList(usrsJsonArray);
+            
+        }
 
-            MySqlDataReader mdr = execSql("SELECT * FROM user");
-            while (mdr.Read())
-            {
-                Console.WriteLine(mdr.GetString(0));
-            }
-            return mdr;
+        public async void deleteUser(int id)
+        {
+            var usrs = await client.GetAsync("http://localhost:8080/user/DeleteUser/"+(id.ToString()));
         }
 
         public Boolean checkCredentials(string login, string pw)
@@ -42,14 +44,7 @@ namespace gestion_utilisateur_vela
             return true;
         }
 
-        private MySqlDataReader execSql(string sql)
-        {
-            MySqlConnection conn = new MySqlConnection(Connstring);
-            conn.Open();
-            MySqlCommand sqlcmd = new MySqlCommand(sql, conn);
-            MySqlDataReader reader = sqlcmd.ExecuteReader();
-            return reader;
-        }
+        
 
 
     }
