@@ -45,6 +45,7 @@ namespace gestion_utilisateur_vela
             this.Lbl_pw = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.Txt_Role = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@ namespace gestion_utilisateur_vela
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(138, 241);
+            this.label1.Location = new System.Drawing.Point(138, 235);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
@@ -63,7 +64,7 @@ namespace gestion_utilisateur_vela
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(432, 241);
+            this.label2.Location = new System.Drawing.Point(432, 235);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 25);
@@ -149,7 +150,7 @@ namespace gestion_utilisateur_vela
             // Txt_Name
             // 
             this.Txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Name.Location = new System.Drawing.Point(128, 295);
+            this.Txt_Name.Location = new System.Drawing.Point(128, 289);
             this.Txt_Name.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Txt_Name.Name = "Txt_Name";
             this.Txt_Name.Size = new System.Drawing.Size(196, 31);
@@ -172,6 +173,7 @@ namespace gestion_utilisateur_vela
             this.Txt_Email.Name = "Txt_Email";
             this.Txt_Email.Size = new System.Drawing.Size(279, 31);
             this.Txt_Email.TabIndex = 17;
+            this.Txt_Email.TextChanged += new System.EventHandler(this.Txt_Email_TextChanged);
             // 
             // Txt_pw
             // 
@@ -186,7 +188,7 @@ namespace gestion_utilisateur_vela
             // 
             this.Lbl_pw.AutoSize = true;
             this.Lbl_pw.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_pw.Location = new System.Drawing.Point(138, 489);
+            this.Lbl_pw.Location = new System.Drawing.Point(123, 499);
             this.Lbl_pw.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Lbl_pw.Name = "Lbl_pw";
             this.Lbl_pw.Size = new System.Drawing.Size(106, 25);
@@ -213,11 +215,21 @@ namespace gestion_utilisateur_vela
             this.label9.Size = new System.Drawing.Size(0, 25);
             this.label9.TabIndex = 14;
             // 
+            // Txt_Role
+            // 
+            this.Txt_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Role.Location = new System.Drawing.Point(128, 404);
+            this.Txt_Role.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Txt_Role.Name = "Txt_Role";
+            this.Txt_Role.Size = new System.Drawing.Size(66, 31);
+            this.Txt_Role.TabIndex = 20;
+            // 
             // SingleUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 679);
+            this.Controls.Add(this.Txt_Role);
             this.Controls.Add(this.Txt_pw);
             this.Controls.Add(this.Lbl_pw);
             this.Controls.Add(this.Txt_Email);
@@ -263,5 +275,6 @@ namespace gestion_utilisateur_vela
         private System.Windows.Forms.Label Lbl_pw;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Txt_Role;
     }
 }

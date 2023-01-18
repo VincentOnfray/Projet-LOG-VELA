@@ -48,6 +48,7 @@ namespace gestion_utilisateur_vela
             Txt_Firstname.Text = currentUsr.firstname;
             Txt_Name.Text = currentUsr.name;
             Txt_Id.Text = currentUsr.idUser;
+            Txt_Role.Text = currentUsr.idRole;
         }
 
         private void getUiInputData()
@@ -56,8 +57,9 @@ namespace gestion_utilisateur_vela
             currentUsr.email = Txt_Email.Text ;
             currentUsr.firstname = Txt_Firstname.Text;
             currentUsr.name = Txt_Name.Text;
-            currentUsr.idRole = "1";
+            
             currentUsr.idUser_Parrainer = "0";
+            currentUsr.idRole = Txt_Role.Text;
 
             if (mode == SingleUserFormMode.create) currentUsr.password = Txt_pw.Text;
             
@@ -86,6 +88,11 @@ namespace gestion_utilisateur_vela
         }
 
         private void SingleUserForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_Email_TextChanged(object sender, EventArgs e)
         {
 
         }

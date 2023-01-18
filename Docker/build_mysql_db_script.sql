@@ -26,9 +26,15 @@ CREATE TABLE article(
         idArticle Int  Auto_increment  NOT NULL ,
         article   Varchar (50) NOT NULL ,
         prix      Float NOT NULL ,
-        type      Bool NOT NULL
+        type      Bool NOT NULL,
+		idRestaurant int NOT NULL
 	,CONSTRAINT article_PK PRIMARY KEY (idArticle)
+	
 );
+
+
+
+
 
 
 CREATE TABLE user(
@@ -63,6 +69,7 @@ CREATE TABLE restaurant(
 );
 
 
+
 CREATE TABLE livraison(
         idLivraison Int  Auto_increment  NOT NULL ,
         date        Date NOT NULL ,
@@ -87,6 +94,10 @@ ALTER TABLE user
 	REFERENCES role(idRole);
 
 
+ALTER TABLE article
+	ADD CONSTRAINT article_restaurant_FK
+	FOREIGN KEY (idRestaurant)
+	REFERENCES restaurant(idRestaurant);
 
 ALTER TABLE commande
 	ADD CONSTRAINT commande_user0_FK
