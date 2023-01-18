@@ -1,21 +1,14 @@
 <template>
-  <ol class="properties">
-    <li>{{Commande.Nom}}</li>
-    <li>{{Commande.Origine}}</li>
-    <li>{{Commande.Destination}}</li>
-    <button type="submit">Accepter la commande</button>
-    <button type="submit" class="cancelbtn">Refuser la commande</button>
-  </ol>  
+  <div>{{Component.Nom}}</div>
+  <div>Component</div>
 </template>
 
 <script lang="ts">
   import { Options, Vue } from 'vue-class-component'; // @ is an alias to /src
 
   export default class HomeProp extends Vue {  
-    Commande!:{
+    Component!:{
       Nom: string;
-    Destination: string;
-    Origine: string;
     }
   }    
 </script>

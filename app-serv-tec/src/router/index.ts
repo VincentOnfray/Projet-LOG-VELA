@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
+    path: '/:component',
+    name: 'component',
+    component: HomeView
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting
