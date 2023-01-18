@@ -20,6 +20,9 @@ export class user {
     
     @Column()
     idRole!: number ;
+
+    @Column()
+    idUser_parrainer!: number ;
 }
 
 

@@ -3,7 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
-    redirect: '/folder/Profil',
+    redirect: '/folder/LogMe',
     
   },
   {
@@ -26,6 +26,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/folder/Restaurant/Article/Ajout',
     component: () => import ('../views/AjoutArticlePage.vue')
+  },
+  {
+      path: '/folder/LogMe',
+      component: () => import ('../views/LogMe.vue')
   }
 ]
 

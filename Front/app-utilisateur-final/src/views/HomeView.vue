@@ -11,16 +11,14 @@
 import { Options, Vue } from 'vue-class-component';
 import NavBar from '@/components//tools/NavBar.vue'; 
 import HomeMenu from '@/components/home/HomeMenu.vue'; // @ is an alias to /src
-import HomePop from '@/components/home/HomePop.vue'; // @ is an alias to /src
-import HomeAdvantage from '@/components/home/HomeAdvantage.vue'; // @ is an alias to /src
+/*import HomePop from '@/components/home/HomePop.vue'; // @ is an alias to /src
+import HomeAdvantage from '@/components/home/HomeAdvantage.vue';*/ // @ is an alias to /src
 
 
 @Options({
   components: {
     NavBar,
-    HomeMenu,
-    HomePop,
-    HomeAdvantage
+    HomeMenu
   },
 })
 export default class HomeView extends Vue {}

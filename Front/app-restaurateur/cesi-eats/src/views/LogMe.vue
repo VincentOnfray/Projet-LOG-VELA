@@ -32,7 +32,14 @@ export default {
           const password = formData.value.password;
           console.log(email);
           console.log(password);
-          axios.post('localhost:8081/get/signin',{email,password})
+          axios.get('https://www.google.com', {
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+          "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+
+          // remove headers
+        }})
           
             .then(response => {
               if (response) {
@@ -40,7 +47,7 @@ export default {
                 console.log(formData.value.email);
                 console.log(formData.value.password);
                 //router.push({ path: '/home', force: true });
-                router.push('/command');
+                router.push('/folder/Profil');
               }
               else {
                 console.log(formData.value.email);

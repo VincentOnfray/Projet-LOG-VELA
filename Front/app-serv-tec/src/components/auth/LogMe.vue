@@ -2,35 +2,46 @@
     <nav class="bar">
         <h1> Me connecter</h1>
     </nav>
-    <form action="connexion">
+  <form @submit.prevent="submitForm">
+    <label>
+      Email:
+      <input v-model="email" type="email" required>
+    </label>
+    <br>
+    <label>
+      Mot de passe:
+      <input v-model="password" type="password" required>
+    </label>
+    <br>
+    <button type="submit">Se connecter</button>
+  </form>
+</template>
 
-    <div class="container">
-    <label for="uname"><b>Nom d'utilisateur</b></label>
-    <input type="text" placeholder="Nom d'utilisateur" name="uname" required>
+<script lang="ts">
+import axios from 'axios';
 
-    <label for="psw"><b>Mot de passe</b></label>
-    <input type="password" placeholder="Mot de passe" name="psw" required>
-
-    <button type="submit">Connexion</button>
-  </div>
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn"><a href="#">> 
-Retour à l'accueil</a></button>
-    <span class="psw">Mot de passe <a href="#">oublié?</a></span>
-  </div>
-</form>
-
-  </template>
-  <script lang="ts">
-  import { Options, Vue } from 'vue-class-component';
-
-  @Options({
-    props: {
-    }
-  })
-  export default class LogMe extends Vue {
-  }
-  </script>
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    async submitForm() {
+      try {
+        const response = await axios.post('/api/login', {
+          email: this.email,
+          password: this.password,
+        });
+        // traiter la réponse
+      } catch (error) {
+        // gérer l'erreur
+      }
+    },
+  },
+};
+</script>
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
