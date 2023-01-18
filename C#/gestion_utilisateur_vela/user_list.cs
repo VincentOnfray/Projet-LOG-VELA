@@ -64,7 +64,6 @@ namespace gestion_utilisateur_vela
                 currItem.SubItems.Add(u.name);
                 currItem.SubItems.Add(u.firstname);
                 currItem.SubItems.Add(u.email);
-                currItem.SubItems.Add(u.password);
                 currItem.SubItems.Add(u.idRole);
                 currItem.SubItems.Add(u.idUserParrainer);
                 usrViewItems[i]=(currItem);
@@ -88,7 +87,7 @@ namespace gestion_utilisateur_vela
         private void refreshList()
         {
             ListView.Items.Clear();
-            Db_Connect db = Db_Connect.getInstance();
+            Api_Manager db = Api_Manager.getInstance();
             db.getUsers();
         }
 
@@ -123,7 +122,7 @@ namespace gestion_utilisateur_vela
         {
             if (currentSelectedID !=-1) //An actual ID is selected
             {
-                Db_Connect.getInstance().deleteUser(currentSelectedID);
+                Api_Manager.getInstance().deleteUser(currentSelectedID);
                 refreshList();
             }
         }

@@ -34,7 +34,7 @@ namespace gestion_utilisateur_vela
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(isLoginValid(txbx_username.Text, txbx_password.Text)){ 
+            if(Login_manager.getInstance().checkCredentials(txbx_username.Text, txbx_password.Text)){ 
                 //Load next form
                 user_list f = new user_list(); 
                 f.Show();
@@ -51,6 +51,11 @@ namespace gestion_utilisateur_vela
         }
 
         private void txbx_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

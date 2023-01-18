@@ -87,7 +87,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Db_Connect.cs" />
+    <Compile Include="Login_Manager.cs" />
+    <Compile Include="Api_Manager.cs" />
     <Compile Include="Single_user.cs">
       <SubType>Form</SubType>
     </Compile>

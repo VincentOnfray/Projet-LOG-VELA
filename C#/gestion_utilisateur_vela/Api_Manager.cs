@@ -9,13 +9,13 @@ namespace gestion_utilisateur_vela
 {
    
 
-    class Db_Connect
+    class Api_Manager
     {
-        private static Db_Connect Instance;
+        private static Api_Manager Instance;
         static HttpClient client = new HttpClient();
-        public static Db_Connect getInstance() {
+        public static Api_Manager getInstance() {
             if (Instance == null) {
-                Instance = new Db_Connect(); 
+                Instance = new Api_Manager(); 
             }
 
             return Instance;
@@ -43,7 +43,9 @@ namespace gestion_utilisateur_vela
 
         public Boolean checkCredentials(string login, string pw)
         {
-            return true;
+            //TODO: an actual login check
+            if(login.Length>5 && pw.Length > 5)return true;
+            return false;
         }
 
         
