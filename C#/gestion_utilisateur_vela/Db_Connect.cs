@@ -36,7 +36,9 @@ namespace gestion_utilisateur_vela
 
         public async void deleteUser(int id)
         {
-            var usrs = await client.GetAsync("http://localhost:8080/user/DeleteUser/"+(id.ToString()));
+            var usrs = await client.DeleteAsync("http://localhost:8080/user/DeleteUser/"+id.ToString());
+            var usrsJson = await usrs.Content.ReadAsStringAsync();
+            Console.WriteLine(usrsJson);
         }
 
         public Boolean checkCredentials(string login, string pw)
