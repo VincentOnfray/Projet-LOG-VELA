@@ -24,6 +24,7 @@ namespace gestion_utilisateur_vela
         public string AsJson()
         {
              var json = JsonConvert.SerializeObject(this);
+            Console.WriteLine(json);
             return json;
         }
     }

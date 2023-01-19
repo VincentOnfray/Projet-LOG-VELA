@@ -58,12 +58,15 @@ namespace gestion_utilisateur_vela
             currentUsr.firstname = Txt_Firstname.Text;
             currentUsr.name = Txt_Name.Text;
             
-            currentUsr.idUser_Parrainer = "0";
+            
             currentUsr.idRole = Txt_Role.Text;
 
-            if (mode == SingleUserFormMode.create) currentUsr.password = Txt_pw.Text;
-            
-            
+            if (mode == SingleUserFormMode.create)
+            {
+                currentUsr.password = Txt_pw.Text;
+                currentUsr.idUser_Parrainer = "0";
+            }
+
         }
        
 
@@ -81,6 +84,8 @@ namespace gestion_utilisateur_vela
                     Api_Manager.getInstance().UpdateUser(usrJson, currentUsr.idUser);
                     break;
             }
+
+            
 
 
             this.Close();

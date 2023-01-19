@@ -3,8 +3,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using MySql.Data.MySqlClient;
-
-
+using System.Net.Http;
+using System.Net.Http.Json;
+using Newtonsoft.Json.Linq;
 
 namespace gestion_utilisateur_vela
 {
@@ -55,18 +56,19 @@ namespace gestion_utilisateur_vela
 
         public async void UpdateUser(string jsonUsr, string id)
         {
-            var content = new StringContent(jsonUsr);
-            var usr = await client.PutAsync("http://localhost:8080/user/UpdateUser/" + id.ToString(),content);
+            //Console.WriteLine(jsonUsr);
+            var jsonCont = JsonContent.Create(JsonConvert.DeserializeObject<User>(jsonUsr));
+            var usr = await client.PutAsync("http://localhost:8080/user/UpdateUser/" + id.ToString(),jsonCont);
             var answer = await usr.Content.ReadAsStringAsync();
             MongoApiConnector.getInstance().Log("Updated usr: "+jsonUsr);
-
-            Console.WriteLine("ANSWER: "+answer);
+            Console.WriteLine("UPDATE ANSWER: "+answer);
         }
 
         public async void CreateUser(string jsonUsr)
         {
-            var content = new StringContent(jsonUsr);
-            var usr = await client.PostAsync("http://localhost:8080/user/AddUser",content);
+            
+            var jsonCont = JsonContent.Create(JsonConvert.DeserializeObject<User>(jsonUsr));
+            var usr = await client.PostAsync("http://localhost:8080/user/AddUser",jsonCont);
             var answer = await usr.Content.ReadAsStringAsync();
 
             MongoApiConnector.getInstance().Log("CreatedUsr: " +jsonUsr);
