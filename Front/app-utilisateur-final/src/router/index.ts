@@ -9,6 +9,11 @@ import ChangeView from '../views/ChangeView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
+    path:'/',
+    redirect:'/login',
+
+  },
+  {
     path: '/',
     name: 'home',
     component: HomeView

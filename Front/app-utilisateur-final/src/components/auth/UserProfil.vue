@@ -6,24 +6,29 @@
     <router-link to="/change" style="color:black" class="pop">Modifier</router-link>    
     <br>
     <br>
-    <div>Lien de parrainage : {{Link}}</div>
+    <div>Lien de parrainage : /MonParrainage/</div>
     <br>
   </div>
 
   </template>
-  <script lang="ts">
-  import { Options, Vue } from 'vue-class-component';
-
-  @Options({
-    props: {
-    }
-  })
-  export default class LogMe extends Vue {
-    Name: string = "TEST";
-    Email: string = "TEST";
-    Link: string = "http://www.test/cesi.fr";
-  }
-  </script>
+ <script lang="ts">
+ import {
+   defineComponent,
+   ref,
+ } from 'vue';
+ import ExploreContainer  from '@/components/ExploreContainer.vue';
+ export default defineComponent({
+   setup(){
+     const Name = localStorage.getItem('name');
+     const Email = localStorage.getItem('email'); 
+ 
+     return {
+       Name,
+       Email
+     }
+   },
+ })
+ </script>
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>

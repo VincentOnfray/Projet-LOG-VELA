@@ -7,7 +7,7 @@
     <button class="menu"><img src="../../ressources/Menu.png"></button>
     -->
     <router-link to="/command" style="color:white" class="pop">Commandes</router-link>
-    <router-link to="/search" class="recherche" style="color:white" id="loupe">Recherche</router-link>
+    <router-link to="/search" class="recherche" style="color:white" id="loupe">Restaurants</router-link>
     <router-link to="/user" class="user" v-if="connect === true"><img src="../../ressources/Utilisateur.jpg"></router-link>
     <router-link to="/login" style="color:white" class="con" v-else>Connexion</router-link>
     
