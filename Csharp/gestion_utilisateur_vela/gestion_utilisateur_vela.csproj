@@ -174,10 +174,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MongoApiConnector.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="Login_Manager.cs" />
-    <Compile Include="Api_Manager.cs" />
+    <Compile Include="Scripts\MongoApiConnector.cs" />
+    <Compile Include="Scripts\User.cs" />
+    <Compile Include="Scripts\Login_Manager.cs" />
+    <Compile Include="Scripts\Api_Manager.cs" />
     <Compile Include="SingleUserForm.cs">
       <SubType>Form</SubType>
     </Compile>

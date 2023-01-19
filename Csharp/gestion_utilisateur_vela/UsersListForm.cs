@@ -150,5 +150,10 @@ namespace gestion_utilisateur_vela
         {
             refreshList();
         }
+
+        private void UsersListForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

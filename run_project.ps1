@@ -1,6 +1,6 @@
 #Run Mysql docker
 cd  Docker/
-.\_run_docker_compose.ps1
+.\__VELA_Full_Pipeline.ps1
 
 
 
