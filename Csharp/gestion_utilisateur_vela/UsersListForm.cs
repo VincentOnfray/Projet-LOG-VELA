@@ -72,7 +72,7 @@ namespace gestion_utilisateur_vela
             refreshList();
         }
 
-        private void refreshList()
+        public void refreshList()
         {
             ListView.Items.Clear();
             Api_Manager db = Api_Manager.getInstance();

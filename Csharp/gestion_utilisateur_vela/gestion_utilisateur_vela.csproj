@@ -186,6 +186,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Scripts\user_without_ID.cs" />
     <Compile Include="Scripts\MongoApiConnector.cs" />
     <Compile Include="Scripts\User.cs" />
     <Compile Include="Scripts\Login_Manager.cs" />
