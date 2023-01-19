@@ -44,7 +44,7 @@ CREATE TABLE user(
         email            Varchar (50) NOT NULL ,
         password         Varchar (50) NOT NULL ,
         idRole           Int NOT NULL ,
-        idUser_parrainer Int NOT NULL
+        idUser_parrainer Int NOT NULL  DEFAULT 0
 	,CONSTRAINT user_PK PRIMARY KEY (idUser)
 );
 

@@ -100,3 +100,11 @@ C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisate
 C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Net.Http.Json.dll
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Text.Json.dll
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.ValueTuple.dll
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Net.Http.Json.xml
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.Text.Json.xml
+C:\Users\blenn\Documents\CESI\FISA4\LOG\Projet-LOG-VELA\Csharp\gestion_utilisateur_vela\bin\Debug\System.ValueTuple.xml
