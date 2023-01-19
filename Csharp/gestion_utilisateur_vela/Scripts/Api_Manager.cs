@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 using System.Net.Http;
 using System.Net.Http.Json;
 using Newtonsoft.Json.Linq;
+using gestion_utilisateur_vela.Scripts;
 
 namespace gestion_utilisateur_vela
 {
@@ -57,7 +58,9 @@ namespace gestion_utilisateur_vela
         public async void UpdateUser(string jsonUsr, string id)
         {
             //Console.WriteLine(jsonUsr);
-            var jsonCont = JsonContent.Create(JsonConvert.DeserializeObject<User>(jsonUsr));
+            var user = new user_without_ID(JsonConvert.DeserializeObject<User>(jsonUsr));
+            var jsonCont = JsonContent.Create(user);
+
             var usr = await client.PutAsync("http://localhost:8080/user/UpdateUser/" + id.ToString(),jsonCont);
             var answer = await usr.Content.ReadAsStringAsync();
             MongoApiConnector.getInstance().Log("Updated usr: "+jsonUsr);

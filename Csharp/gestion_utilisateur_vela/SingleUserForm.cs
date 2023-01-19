@@ -83,6 +83,8 @@ namespace gestion_utilisateur_vela
                 case SingleUserFormMode.edit:
                     Api_Manager.getInstance().UpdateUser(usrJson, currentUsr.idUser);
                     break;
+
+                    UsersListForm.getInstance().refreshList();
             }
 
             
