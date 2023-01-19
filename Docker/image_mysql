@@ -1,0 +1,6 @@
+FROM mysql:latest
+RUN mkdir /usr/custom
+COPY build_mysql_db_script.sql  /usr/custom/build_mysql_db_script.sql
+COPY populate_mysql.sql  /usr/custom/populate_mysql.sql
+COPY populate_mysql.sh  /usr/custom/populate_mysql.sh
+COPY build_mysql_db.sh /usr/custom/build_mysql_db.sh
