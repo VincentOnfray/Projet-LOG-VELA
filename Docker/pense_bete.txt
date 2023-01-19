@@ -1,0 +1,8 @@
+#Pour build une image:
+docker build -t $nomdimage . -f $fichierdockerfile
+
+#pour run une image
+docker run $image
+
+#Si VMMEM bouffe la ram : 
+wsl --shutdown
